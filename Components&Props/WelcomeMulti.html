@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Welcome</title>
+		<script src="https://unpkg.com/react@latest/dist/react.js"></script>
+		<script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	</head>
+	<body>
+		<div id="root"></div>
+		<div id="root2"></div>
+		<script type=text/babel>
+		function Welcome(props) {
+		return <h1>Hello, {props.name}</h1>;
+		}
+		function App() {
+		return (
+		<div>
+					<Welcome name="Sahil" />
+					<Welcome name="Nilay" />
+					<Welcome name="Ravi" />
+		</div>
+		);
+		}
+		function Welcome123(props) {
+				return <h1>Hello, {props.name}</h1>;
+			}
+			const element = <Welcome123 name="Aubergine Solutions"/>;
+		ReactDOM.render(
+		<App />,
+					document.getElementById('root')
+					);
+					ReactDOM.render(
+				element,
+				document.getElementById('root2')
+				);
+			</script>
+		</body>
+	</html>
